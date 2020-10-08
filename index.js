@@ -55,6 +55,24 @@ $(document).ready(function() {
                         $("#label").val("");
                         state = "TRANS"
                         break;
+                        case 43: // Плюс
+                        if(state != "LEFT" && state != "LEFTDOT") break;
+                        operation = "+";
+                        $("#label").val("");
+                        state = "TRANS"
+                        break;
+                    case 42: // Умножить
+                        if(state != "LEFT" && state != "LEFTDOT") break;
+                        operation = "*";
+                        $("#label").val("");
+                        state = "TRANS"
+                        break;
+                    case 47: // Разделить
+                        if(state != "LEFT" && state != "LEFTDOT") break;
+                        operation = "/";
+                        $("#label").val("");
+                        state = "TRANS"
+                        break;
                 }
         }
     })
