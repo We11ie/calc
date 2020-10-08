@@ -46,8 +46,16 @@ $(document).ready(function() {
                     state = "RIGHT";
                     break;
             }
+        } else {
+                // Не цифры
+                switch(eventObject.which){ // Символы
+                    case 45: // Минус
+                        if(state != "LEFT" && state != "LEFTDOT") break;
+                        operation = "-";
+                        $("#label").val("");
+                        state = "TRANS"
+                        break;
+                }
         }
     })
-
-
 })
