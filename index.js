@@ -1,3 +1,20 @@
+doOperation = function(left, right, operation) {
+    switch(operation) {
+        case "-":
+            $("#label").val(parseFloat(left) - parseFloat(right));
+            break;
+        case "+":
+            $("#label").val(parseFloat(left) + parseFloat(right));
+            break;
+        case "*":
+            $("#label").val(parseFloat(left) * parseFloat(right));
+            break;
+        case "/":
+            $("#label").val(parseFloat(left) / parseFloat(right));
+            break;
+    }
+}
+
 $(document).ready(function() {
     /*
         - 45
@@ -88,6 +105,13 @@ $(document).ready(function() {
                             $("#label").val(left);
                         }
                         break;
+                        case 13:
+                case 61:
+                    if (left == "" || right == "") break;
+                    doOperation(left, right, operation);
+                    left = "";
+                    right = "";
+                    state = "LEFT";
                 }
         }
     })
