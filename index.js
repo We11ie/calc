@@ -16,5 +16,9 @@ $(document).ready(function() {
         TRANS - переходное состояние во время ввода действия
     */
 
-    
+    $(document).keypress(function(eventObject) {
+        
+    })
+
+
 })
