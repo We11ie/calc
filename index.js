@@ -35,6 +35,16 @@ $(document).ready(function() {
                     left += eventObject.which - 48;
                     $("#label").val(left);
                     break;
+                case "RIGHT": // Правый операнд
+                case "RIGHTDOT":
+                    right += eventObject.which - 48;
+                    $("#label").val(right);
+                    break;
+                case "TRANS": // Переход
+                    right += eventObject.which - 48;
+                    $("#label").val(right);
+                    state = "RIGHT";
+                    break;
             }
         }
     })
