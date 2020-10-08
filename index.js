@@ -73,6 +73,21 @@ $(document).ready(function() {
                         $("#label").val("");
                         state = "TRANS"
                         break;
+                        case 46: // Точка
+                        if(state == "LEFT") {
+                            if (left == "") break;
+                            state = "LEFTDOT";
+                            left += ".";
+                            $("#label").val(left);
+                        }
+    
+                        if(state == "RIGHT") {
+                            if(right == "") break;
+                            state = "RIGHTDOT";
+                            right += ".";
+                            $("#label").val(left);
+                        }
+                        break;
                 }
         }
     })
