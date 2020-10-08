@@ -102,7 +102,7 @@ $(document).ready(function() {
                             if(right == "") break;
                             state = "RIGHTDOT";
                             right += ".";
-                            $("#label").val(left);
+                            $("#label").val(right);
                         }
                         break;
                         case 13:
