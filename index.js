@@ -16,8 +16,27 @@ $(document).ready(function() {
         TRANS - переходное состояние во время ввода действия
     */
 
+   let left = "";
+   let right = "";
+   let state = "LEFT";
+   let operation = ""
+
     $(document).keypress(function(eventObject) {
-        
+        if (eventObject.which > 47 && eventObject.which < 58) {
+            // Цифры
+            switch(state) {
+                case "LEFT": // Левый операнд
+                case "LEFTDOT":
+                    if(state == "TRANS") {
+                        state = "RIGHT";
+                        break;    
+                    }
+
+                    left += eventObject.which - 48;
+                    $("#label").val(left);
+                    break;
+            }
+        }
     })
 
 
